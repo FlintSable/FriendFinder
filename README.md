@@ -1,2 +1,2 @@
-# FriendFinder
-Node express Friend Finding Application 
+# library-express
+simple node express app study
