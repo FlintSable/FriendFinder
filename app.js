@@ -25,8 +25,13 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+// access information that is encoded
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(__dirname + "/public"));
+// MVP page
+
 
 app.use('/', index);
 app.use('/users', users);
