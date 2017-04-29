@@ -11,20 +11,13 @@ block content
 			li first element
 			li second element
 			li third element
-	form(method='post', action='/')
+	form(method='post', action='/results')
 	label(for="ourid") Label
 	input(name="ourname", type="text", id="ourid", placeholder="placeholder")
 	input(type='submit', value='submity')
 
-	table
-		tr
-			td
-				label name
-			td
-				input(name='name', id='name')
-		tr
-			td
-				lable another name
-			td
-				input(name='anothername', id='anothername')
+	select.input-field
+		each digit,i in digits
+			option(value=i) #{digit}
+
 
