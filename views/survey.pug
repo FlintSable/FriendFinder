@@ -4,33 +4,19 @@ block content
 	h1= title
 	p Welcome to the #{title}
 	p= message
-	a(href="http://google.com") Go back somewhere
+	hr
+	br
 	form(method='post', action='/results')
 	label(for="ourid") Name
-	input(name="ourname", type="text", id="ourid", placeholder="placeholder")
-	input(type='submit', value='submity')
+	input(name="ourname", type="text", id="ourid", placeholder="name")
+	label(for="ourid") Picture link
+	input(name="ourname", type="text", id="ourid", placeholder="url link to picture")
 
 	select.input-field
 		each digit,i in digits
 			option(value=i) #{digit}
 
+	input(class='btn waves-effect waves-light',type='submit', value='submity')
 
-	form(method='post', action='/')
-	label(for="ourid") Label
-	input(name="ourname", type="text", id="ourid", placeholder="placeholder")
-	input(type='submit', value='submity')
-
-	table
-		tr
-			td
-				label name
-			td
-				input(name='name', id='name')
-		tr
-			td
-				lable another name
-			td
-				input(name='anothername', id='anothername')
-	a(href=) this is the link text
 
 
