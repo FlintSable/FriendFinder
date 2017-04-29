@@ -2,22 +2,35 @@ extends layout
 
 block content
 	h1= title
-	p Welcome to #{title}
+	p Welcome to the #{title}
 	p= message
-	a(href="http://google.com") this is the link text
-
-	div
-		ul
-			li first element
-			li second element
-			li third element
+	a(href="http://google.com") Go back somewhere
 	form(method='post', action='/results')
-	label(for="ourid") Label
+	label(for="ourid") Name
 	input(name="ourname", type="text", id="ourid", placeholder="placeholder")
 	input(type='submit', value='submity')
 
 	select.input-field
 		each digit,i in digits
 			option(value=i) #{digit}
+
+
+	form(method='post', action='/')
+	label(for="ourid") Label
+	input(name="ourname", type="text", id="ourid", placeholder="placeholder")
+	input(type='submit', value='submity')
+
+	table
+		tr
+			td
+				label name
+			td
+				input(name='name', id='name')
+		tr
+			td
+				lable another name
+			td
+				input(name='anothername', id='anothername')
+	a(href=) this is the link text
 
 

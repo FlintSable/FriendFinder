@@ -1,12 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var poke = require('../api/data.js');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     // the seccond paramter could be a function
     indexData = {
-        title: 'Friend Finder',
-        message: 'And to the Jungle'
+        title: 'Jungle',
+        message: 'the Jungle'
     };
     res.render('index', indexData);
 });
@@ -26,18 +28,26 @@ router.post('/', function(req, res, next) {
 
 
 router.get('/survey', function(req, res, next) {
-	surveyData = {
-		title: 'Date Survey',
-		message: 'ONLINE DATING',
-		digits: [1, 2, 3, 4, 5]
-	};
+    surveyData = {
+        title: 'Survey',
+        message: 'Find a friend',
+        digits: [1, 2, 3, 4, 5]
+    };
 
     res.render('survey', surveyData);
 });
 
 
-router.get('/results', function(req, res, next){
+router.get('/results', function(req, res, next) {
 
+
+});
+
+router.get('/api/data', function(req, res, next) {
+
+});
+
+router.get('/api/new-data', function(req, res, next) {
 
 });
 

@@ -1,1 +1,1 @@
-alert("TESTING");
+console.log("TESTING, this file will include the ajax requests");
