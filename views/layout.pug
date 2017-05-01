@@ -1,9 +1,13 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/materialize.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='/javascripts/main.js')
-  body
+html(lang="en")
+    link(rel='stylesheet', href='/static/css/style.css', type='type/css')
+    include ./partials/_head
     block content
+
+    body#page-top
+    script(src='/static/js/jquery.js')
+    script(src='/static/js/materialize.min.js')
+    script(src='/static/js/jquery.easing.min.js')
+    script(src='/static/js/jquery.fittext.js')
+    script(src='/static/js/wow.min.js')
+

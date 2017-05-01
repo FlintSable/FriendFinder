@@ -1,22 +1,29 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to the #{title}
-	p= message
-	hr
-	br
-	form(method='post', action='/results')
-	label(for="ourid") Name
-	input(name="ourname", type="text", id="ourid", placeholder="name")
-	label(for="ourid") Picture link
-	input(name="ourname", type="text", id="ourid", placeholder="url link to picture")
+    h1= title
+    p Welcome to the #{title}
+    p= message
+    hr
+    br
+    form(method='post', action='/results')
+    label(for="ourid") Name
+    input(name="ourname", type="text", id="ourid", placeholder="name")
+    label(for="ourid") Picture link
+    input(name="ourname", type="text", id="ourid", placeholder="url link to picture")
+    div.input-field
+        select(id="q1")
+            - for (var i=0; i<=5; i++){
+                - if(i<1){
+                option(value=i) 
+                - }
+                option(value=i) #{i}
 
-	select.input-field
-		each digit,i in digits
-			option(value=i) #{digit}
-
-	input(class='btn waves-effect waves-light',type='submit', value='submity')
+            - }
 
 
+        label(for='select-wrapper') question
+
+
+    button(class="btn waves-effect waves-light", type="submit", name="action", value='submity') Submit
 

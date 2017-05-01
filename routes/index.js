@@ -7,7 +7,7 @@ var poke = require('../api/data.js');
 router.get('/', function(req, res, next) {
     // the seccond paramter could be a function
     indexData = {
-        title: 'Jungle',
+        title: 'JUNGLE',
         message: 'the Jungle'
     };
     res.render('index', indexData);
@@ -27,16 +27,6 @@ router.post('/', function(req, res, next) {
 });
 
 
-router.get('/survey', function(req, res, next) {
-    surveyData = {
-        title: 'Survey',
-        message: 'Find a friend',
-        digits: [1, 2, 3, 4, 5]
-    };
-
-    res.render('survey', surveyData);
-});
-
 
 router.get('/results', function(req, res, next) {
 
@@ -50,5 +40,19 @@ router.get('/api/data', function(req, res, next) {
 router.get('/api/new-data', function(req, res, next) {
 
 });
+
+// router.get('/survey', function(req, res, next) {
+
+    
+//     surveyData = {
+//         title: 'Survey',
+//         message: 'Find a friend',
+//         digits: [1, 2, 3, 4, 5]
+//     };
+
+//     res.render('survey', surveyData);
+// });
+
+
 
 module.exports = router;

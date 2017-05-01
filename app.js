@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 // importing a module with routes in them
 // in these files you will see the app.get requests
 var index = require('./routes/index');
+var survey = require('./routes/survey');
 var users = require('./routes/users');
 
 
@@ -28,12 +29,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // access information that is encoded
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(express.static(__dirname + "/public"));
+app.use('/static', express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + "/public"));
 // MVP page
 
 
 app.use('/', index);
+app.use('/', survey );
 app.use('/users', users);
 
 // catch 404 and forward to error handler

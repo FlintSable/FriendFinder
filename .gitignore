@@ -1,3 +1,5 @@
 node_modules/
 bak/
 notes.txt
+public/lib
+bower_components

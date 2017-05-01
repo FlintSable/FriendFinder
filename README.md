@@ -1,2 +1,9 @@
 # library-express
-simple node express app study
+
+
+npm install 
+
+nodemon bin/www
+node bin/www
+ or npm start
+ or npm run devstart 
