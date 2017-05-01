@@ -1,7 +1,7 @@
 # HW Friend Finder {Node + Express + Pug}
 
 getting started: 
-npm install 
+  - npm install 
 
 Multiple ways to start the application: 
   debug mode: 
