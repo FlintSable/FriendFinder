@@ -1,9 +1,14 @@
-# library-express
+# Friend Finder Homework {Node + Express + Pug}
 
-
+getting started: 
 npm install 
 
-- nodemon bin/www
-- node bin/www
-- or npm start
-- or npm run devstart 
+Multiple ways to start the application: 
+  debug mode: 
+  - nodemon bin/www
+  - npm run devstart   
+  
+  deployment mode:
+  - npm start
+  - node bin/www
+  
