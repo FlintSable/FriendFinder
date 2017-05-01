@@ -1,4 +1,4 @@
-# Friend Finder Homework {Node + Express + Pug}
+# HW Friend Finder {Node + Express + Pug}
 
 getting started: 
 npm install 
