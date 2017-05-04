@@ -5,6 +5,15 @@ var burger = {
 		orm.selectAll('burgers', function(res){
 			callback(res);
 		});
+	},
+	insertOne: function(callback){
+		// orm.insertOne('burgers', function(res){
+
+		// });
+
+	},
+	updateOne(): funtion(callback){
+
 	}
 
 
