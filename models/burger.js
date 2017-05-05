@@ -12,13 +12,13 @@ var burger = {
 		// });
 
 	},
-	updateOne(): funtion(callback){
+	updateOne: function(callback){
 
 	}
 
 
 
-}
+};
 
 
 
