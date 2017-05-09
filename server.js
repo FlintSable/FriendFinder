@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const app = express();
 
+var port = process.env.PORT || 8080;
 // middleware setup
 // static
 app.use(express.static('public'));
@@ -25,4 +26,4 @@ app.set('view engine', 'handlebars');
 
 var routes = require('./controllers/burger_controller.js');
 app.use('/', routes);
-app.listen(process.env.PORT || 8080);
+app.listen(port);
