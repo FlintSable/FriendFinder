@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+}
+
+h1 {
+	font-family: 'VT323', monospace;
+	border: 20px solid #FFDC00;
+	color: #7FDBFF;
+	text-shadow: -2px 0 #0074D9, 0 2px #0074D9, 2px 0 #0074D9, 0 -2px #0074D9;
+	padding: 6px 0 0 0;
+
+}
+a {
+  color: #00B7FF;
+}

@@ -1,0 +1,64 @@
+<header class="text-center">
+  <div class="jumbotron">
+    <h1 class="center-align">BURGERS   <img src="/assets/img/bluebur.png" height="54">   EXPRESS</h1>
+  </div>
+</header>
+<main>
+<div class="container text-center">
+  <div class="burger-container">
+    <div class="row main">
+      <div class="col s12 m6">
+        <h4>Fresh Burgers</h4>
+          {{#each burgers}}
+            {{#unless this.devoured}}
+            <div class="row burgers">
+              <div class="col s6 burger chip">
+                {{this.burger_name}}
+              </div>
+              <div class="col s3 m4">
+                <form action="burgers/update/devour/{{this.id}}?_method=PUT" method="POST">
+                  <button class="btn btn-flat blue waves-effect waves-light white-text chip" type="submit" style="float:right">devour</button>
+                </form>
+              </div>
+            </div>
+            <hr class="break">
+            {{/unless}}
+          {{/each}}
+      </div>
+
+      <div class="col s12 m6">
+        <h4>Devoured Burgers</h4>
+          {{#each burgers}}
+            {{#if this.devoured}}
+            <div class="row burgers">
+              <div class="col s6 burger chip">
+                {{this.burger_name}}
+              </div>
+              <div class="col s3 m4">
+                <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+                  <button class="btn btn-flat blue waves-effect waves-light white-text chip" type="submit">DELETE!</button>
+                </form>
+              </div>
+            </div>
+            <hr class="break">
+            {{/if}}
+          {{/each}}
+      </div>
+    </div>
+
+    <div class="row bottom">
+      <h4 class='center-align'>Order burger:</h4>
+      <form class="form-inline" action="burgers/create" method="POST">
+        <div class="form-group">
+          <label for="ca"><h4>Burger Name:</h4></label>
+          <input type="text" id="ca" name="name" class="form-control" required>
+        </div>
+        <button class="btn btn-flat blue waves-effect waves-light white-text chip center-align" type="submit"><i class="fa fa-plus" aria-hidden="true"></i>Add Burger</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+</footer>
